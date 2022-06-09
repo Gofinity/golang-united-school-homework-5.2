@@ -22,7 +22,7 @@ func (c *Cache) Put(key, value string) {
 
 func (c Cache) Keys() []string {
 	var keys []string
-	for key, _ := range c.store {
+	for key := range c.store {
 		keys = append(keys, key)
 	}
 	return keys
